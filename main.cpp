@@ -6,7 +6,7 @@
 #include <fstream>
 #include <sstream>
 using namespace std;
-bool isDelims(char c, string delim);
+
 
 int main(){
     int resp;
@@ -266,8 +266,6 @@ int main(){
                 exit(1);
             }
             
-            //char delims = ': \n';
-            char c;
             int fields = 0;
             while(getline(newStus, line)){
                 std::stringstream ss(line);
@@ -369,11 +367,3 @@ int main(){
 
 }
 
-bool isDelims(char c, string delim){
-    for(int i = 0; i < delim.size(); i++){
-        if(delim[i] == c){
-            return true;
-        }
-    }
-    return false;
-}
